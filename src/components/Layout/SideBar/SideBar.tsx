@@ -9,8 +9,8 @@ import {
 } from '@mui/material';
 import { Key, ReactNode } from 'react';
 import { NavLink } from 'react-router-dom';
-import Logo from '../../assets/Logo.svg';
-import { links } from '../../data/dummyData';
+import Logo from '../../../assets/Logo.svg';
+import { links } from '../../../data/dummyData';
 import { activeListItemButtonStyle, listSubHeaderStyle } from './styles'; //New way of importing in V5 of MUI
 
 const SideBar = () => {

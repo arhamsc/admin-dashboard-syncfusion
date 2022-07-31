@@ -1,18 +1,18 @@
-import { createTheme, Palette } from '@mui/material';
+import { createTheme } from '@mui/material/styles';
 
-//Below code is to extend the interface with custom values in typescript
-import '@mui/material/styles/createPalette';
-declare module '@mui/material/styles/createPalette' {
-    interface PaletteOptions {
-        tertiary: {
-            main: String;
-        };
-        quaternary: {
-            main: String,
-            light: String
-        };
-    }
-}
+// //Below code is to extend the interface with custom values in typescript
+// import '@mui/material/styles/createPalette';
+// declare module '@mui/material/styles/createPalette' {
+//     interface PaletteOptions {
+//         tertiary: {
+//             main: String;
+//         };
+//         quaternary: {
+//             main: String;
+//             light: String;
+//         };
+//     }
+// }
 
 const theme = createTheme({
     palette: {

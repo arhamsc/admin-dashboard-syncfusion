@@ -1,4 +1,4 @@
 export type ContextType = {
     sideBarOpen: Boolean;
-    toggleSideBar: () => void;
+    toggleSideBar: (menuOpen: Boolean) => void;
 };

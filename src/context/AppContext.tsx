@@ -3,19 +3,17 @@ import { ContextType } from '../data/models/context';
 
 const initialContext: ContextType = {
     sideBarOpen: false,
-    toggleSideBar: () => null,
+    toggleSideBar: (menuOpen: Boolean) => Boolean,
 };
 
 export const AppContext = createContext<ContextType>(initialContext);
 
 const AppContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
-    const [sideBar, setSideBar] = useState(true);
-
-    const toggleSideBarHandler = () => setSideBar((prevVal) => !prevVal);
+    const [sideBar, setSideBar] = useState<Boolean>(true);
 
     const appState: ContextType = {
-        sideBarOpen: true,
-        toggleSideBar: toggleSideBarHandler,
+        sideBarOpen: sideBar,
+        toggleSideBar: setSideBar,
     };
     return (
         <AppContext.Provider value={appState}>{children} </AppContext.Provider>

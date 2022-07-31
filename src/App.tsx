@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import { SideBar } from './components';
+import { NavBar, SideBar } from './components';
 import './App.css';
 import { useContext } from 'react';
 import { AppContext } from './context/AppContext';
@@ -25,8 +25,16 @@ function App() {
     return (
         <>
             <Stack direction={'row'} spacing={2} justifyContent="space-between">
-                <Box flex={1}>{sideBarOpen ? <SideBar /> : <></>}</Box>
-                <Box flex={4}>
+                {sideBarOpen ? (
+                    <Box flex={1}>
+                        {' '}
+                        <SideBar />{' '}
+                    </Box>
+                ) : (
+                    <></>
+                )}
+                <Box flex={4} pl={!sideBarOpen ? 4 : 0}>
+                    <NavBar />
                     <Routes>
                         {/* Dashboard */}
                         <Route

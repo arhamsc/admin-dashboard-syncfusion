@@ -60,11 +60,11 @@ export const links : SideBarLinks[] = [
                 icon: <BsKanban />,
             },
             {
-                name: 'editor',
+                name: 'Editor',
                 icon: <FiEdit />,
             },
             {
-                name: 'color-picker',
+                name: 'Color-picker',
                 icon: <BiColorFill />,
             },
         ],
@@ -73,38 +73,38 @@ export const links : SideBarLinks[] = [
         title: 'Charts',
         links: [
             {
-                name: 'line',
+                name: 'Line',
                 icon: <AiOutlineStock />,
             },
             {
-                name: 'area',
+                name: 'Area',
                 icon: <AiOutlineAreaChart />,
             },
 
             {
-                name: 'bar',
+                name: 'Bar',
                 icon: <AiOutlineBarChart />,
             },
             {
-                name: 'pie',
+                name: 'Pie',
                 icon: <FiPieChart />,
             },
-            {
-                name: 'financial',
-                icon: <RiStockLine />,
-            },
-            {
-                name: 'color-mapping',
-                icon: <BsBarChart />,
-            },
-            {
-                name: 'pyramid',
-                icon: <GiLouvrePyramid />,
-            },
-            {
-                name: 'stacked',
-                icon: <AiOutlineBarChart />,
-            },
+            // {
+            //     name: 'Financial',
+            //     icon: <RiStockLine />,
+            // },
+            // {
+            //     name: 'Color-mapping',
+            //     icon: <BsBarChart />,
+            // },
+            // {
+            //     name: 'Pyramid',
+            //     icon: <GiLouvrePyramid />,
+            // },
+            // {
+            //     name: 'Stacked',
+            //     icon: <AiOutlineBarChart />,
+            // },
         ],
     },
 ];

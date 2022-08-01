@@ -19,6 +19,6 @@
         "noImplicitThis": true,
         "strictNullChecks": true
     },
-    "include": ["src", "./src/types/createPalette.d.ts"],
+    "include": ["src", "src/types/index.d.ts"],
     "references": [{ "path": "./tsconfig.node.json" }]
 }

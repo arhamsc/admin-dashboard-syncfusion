@@ -20,15 +20,14 @@ import {
 } from './pages';
 
 function App() {
-    const { sideBarOpen } = useContext(AppContext);
+    const sideBarOpen = useContext(AppContext)?.sideBarOpen ?? true;
 
     return (
         <>
             <Stack direction={'row'} spacing={2} justifyContent="space-between">
                 {sideBarOpen ? (
                     <Box flex={1}>
-                        {' '}
-                        <SideBar />{' '}
+                        <SideBar />
                     </Box>
                 ) : (
                     <></>

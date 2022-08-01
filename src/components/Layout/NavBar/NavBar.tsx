@@ -6,7 +6,6 @@ import {
     Stack,
     styled,
     Typography,
-    useTheme,
 } from '@mui/material';
 import { useContext } from 'react';
 import { BiMenu, BiMessage, BiNotification } from 'react-icons/bi';
@@ -20,8 +19,8 @@ const NavIcon = styled(IconButton)(({ theme }) => ({
 }));
 
 const NavBar = () => {
-    const theme = useTheme();
-    const toggleSideBar = useContext(AppContext).toggleSideBar;
+    const toggleSideBar =
+        useContext(AppContext)?.toggleSideBar ?? function () {};
 
     return (
         <Grid
@@ -32,42 +31,39 @@ const NavBar = () => {
             alignItems="center">
             <Grid item flex={1}>
                 {/* Can ignore quaternary error as i have merged my own interface */}
-                <IconButton onClick={() => toggleSideBar((active) => !active)}>
-                    <BiMenu
-                        fontSize={'2rem'}
-                        color={theme.palette.quaternary.main.toString()}
-                    />
-                </IconButton>
+                <NavIcon
+                    onClick={() => toggleSideBar((active: Boolean) => !active)}>
+                    <BiMenu />
+                </NavIcon>
             </Grid>
             <Grid item>
-                <FiShoppingCart
-                    fontSize={'2rem'}
-                    color={theme.palette.quaternary.main.toString()}
-                />
+                <NavIcon>
+                    <FiShoppingCart />
+                </NavIcon>
             </Grid>
             <Grid item>
-                <Badge badgeContent={4} color="secondary">
-                    <BiMessage
-                        fontSize={'2rem'}
-                        color={theme.palette.quaternary.main.toString()}
-                    />
-                </Badge>
+                <NavIcon>
+                    <Badge badgeContent={4} color="secondary">
+                        <BiMessage />
+                    </Badge>
+                </NavIcon>
             </Grid>
             <Grid item>
-                <Badge badgeContent={1} color="secondary">
-                    <BiNotification
-                        fontSize={'2rem'}
-                        color={theme.palette.quaternary.main.toString()}
-                    />
-                </Badge>
+                <NavIcon>
+                    <Badge badgeContent={1} color="secondary">
+                        <BiNotification />
+                    </Badge>
+                </NavIcon>
             </Grid>
             <Grid item>
                 <Stack direction="row" alignItems={'center'} spacing={1} px={2}>
                     <Avatar />
                     <Typography color="quaternary.main">
-                        Hi,<b>Arham</b>{' '}
+                        Hi,<b>Arham</b>
                     </Typography>
-                    <RiArrowDropDownLine />
+                    <NavIcon>
+                        <RiArrowDropDownLine />
+                    </NavIcon>
                 </Stack>
             </Grid>
         </Grid>

@@ -1,12 +1,12 @@
-import { createContext, FC, ReactNode, useState } from 'react';
+import React, { createContext, FC, ReactNode, useState } from 'react';
 import { ContextType } from '../data/models/context';
 
-const initialContext: ContextType = {
-    sideBarOpen: false,
-    toggleSideBar: (menuOpen: Boolean) => Boolean,
-};
+// const initialContext: ContextType = {
+//     sideBarOpen: false,
+//     toggleSideBar: null,
+// };
 
-export const AppContext = createContext<ContextType>(initialContext);
+export const AppContext = createContext<ContextType | null>(null);
 
 const AppContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
     const [sideBar, setSideBar] = useState<Boolean>(true);

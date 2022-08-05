@@ -32,7 +32,10 @@ function App() {
                 ) : (
                     <></>
                 )}
-                <Box flex={4} pl={!sideBarOpen ? 4 : 0}>
+                <Box flex={4} sx={{
+                    backgroundColor: "primary.main",
+                    zIndex: "0"
+                }} pl={!sideBarOpen ? 4 : 0}>
                     <NavBar />
                     <Routes>
                         {/* Dashboard */}

@@ -2,7 +2,7 @@ import { SxProps } from '@mui/material';
 
 export const cardStyles: SxProps = {
     position: 'relative',
-    width: '20%',
+    width: '80%',
     zIndex: -1,
 };
 

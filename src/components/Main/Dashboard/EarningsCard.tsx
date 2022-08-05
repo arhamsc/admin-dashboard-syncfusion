@@ -1,11 +1,10 @@
-import {
-    FICard,
-    FICardContent,
-} from '../../Layout/UIComponents/FullImageCard/FullImageCard';
+import { FICard } from '../../Layout/UIComponents/FullImageCard/FullImageCard';
 import EarningImage from '../../../assets/Earning.svg';
 import {
+    Box,
+    Button,
+    CardContent,
     CardMedia,
-    Grid,
     IconButton,
     Stack,
     styled,
@@ -23,32 +22,33 @@ const EarningsCard = () => {
                 src={EarningImage}
                 alt="EarningImage"
             />
-            <FICardContent>
-                <Grid container>
-                    <Grid item xs={4}>
-                        <Stack>
-                            <Typography
-                                component="h2"
-                                variant="body1"
-                                fontWeight={'bold'}
-                                color="quaternary.light">
-                                Earnings
-                            </Typography>
-                            <Typography
-                                component="h2"
-                                variant="h5"
-                                fontWeight={'bold'}>
-                                $89,224.556
-                            </Typography>
-                        </Stack>
-                        <Grid item xs={1}>
-                            <NavIcon>
-                                <AiFillDollarCircle />
-                            </NavIcon>
-                        </Grid>
-                    </Grid>
-                </Grid>
-            </FICardContent>
+            <CardContent sx={{ paddingTop: '2rem' }}>
+                <Stack direction="row">
+                    <Stack>
+                        <Typography
+                            component="h2"
+                            variant="body1"
+                            fontWeight={'bold'}
+                            color="quaternary.light">
+                            Earnings
+                        </Typography>
+                        <Typography
+                            component="h2"
+                            variant="h5"
+                            fontWeight={'bold'}>
+                            $89,224.556
+                        </Typography>
+                    </Stack>
+                    <Box width="50%" />
+                    <NavIcon>
+                        <AiFillDollarCircle fontSize={'3.5rem'} />
+                    </NavIcon>
+                </Stack>
+                <Box height="1rem" />
+                <Button variant="contained" color="secondary" disableElevation>
+                    Download
+                </Button>
+            </CardContent>
         </FICard>
     );
 };

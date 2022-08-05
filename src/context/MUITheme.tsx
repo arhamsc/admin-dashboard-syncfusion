@@ -32,4 +32,16 @@ const theme = createTheme({
     },
 });
 
+//Below approach is to use the theme palette inside of the component.
+theme.components = {
+    ...theme.components,
+    MuiButton: {
+        styleOverrides: {
+            contained: {
+                color: theme.palette.primary.main,
+            },
+        },
+    },
+};
+
 export default theme;

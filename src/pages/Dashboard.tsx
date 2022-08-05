@@ -1,16 +1,18 @@
-import { Box, Grid } from '@mui/material'
-import { EarningsCard } from '../components'
-
+import { Container, Grid } from '@mui/material';
+import { EarningsCard, OverViewCards } from '../components';
 const Dashboard = () => {
-  return (
-    <Box>
-        <Grid container direction={"column"}>
-            <Grid item>
-                <EarningsCard/>
+    return (
+        <Container>
+            <Grid container direction={'row'} width="100%">
+                <Grid item xs={4} md={4}>
+                    <EarningsCard />
+                </Grid>
+                <Grid item xs={8}>
+                    <OverViewCards />
+                </Grid>
             </Grid>
-        </Grid>
-    </Box>
-  )
-}
+        </Container>
+    );
+};
 
-export default Dashboard
+export default Dashboard;

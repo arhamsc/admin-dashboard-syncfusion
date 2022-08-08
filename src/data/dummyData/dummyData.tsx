@@ -18,7 +18,7 @@ import { BiColorFill } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
 import { RiContactsLine, RiStockLine } from 'react-icons/ri';
 import { GiLouvrePyramid } from 'react-icons/gi';
-import { SideBarLinks } from './models/sideBarLinks';
+import { SideBarLinks } from '../models/sideBarLinks';
 
 export const links : SideBarLinks[] = [
     {

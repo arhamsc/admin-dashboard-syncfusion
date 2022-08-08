@@ -10,12 +10,13 @@ import {
 import { Key, ReactNode } from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../../../assets/Logo.svg';
-import { links } from '../../../data/dummyData';
+import { links } from '../../../data/dummyData/dummyData';
 import { activeListItemButtonStyle, listSubHeaderStyle } from './styles'; //New way of importing in V5 of MUI
 
 const SideBar = () => {
     return (
-        <Box boxShadow={6}>
+        // Have to give top and left when using the position property
+        <Box boxShadow={6} sx={{ position: 'sticky', top: 0, left: 0 }}>
             <Stack>
                 <Box textAlign={'center'} p={0} m={0}>
                     <NavLink to="/">

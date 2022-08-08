@@ -26,7 +26,7 @@ function App() {
         <>
             <Stack direction={'row'} spacing={2} justifyContent="space-between">
                 {sideBarOpen ? (
-                    <Box flex={1}>
+                    <Box flex={1} >
                         <SideBar />
                     </Box>
                 ) : (

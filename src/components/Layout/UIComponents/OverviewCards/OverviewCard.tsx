@@ -6,7 +6,8 @@ import {
     Stack,
     Typography,
 } from '@mui/material';
-import  { FC, ReactNode } from 'react';
+import { FC, ReactNode } from 'react';
+import { IconBaseProps } from 'react-icons';
 
 const OverviewCard: FC<OverViewCardTypes> = ({
     iconBgColor,
@@ -23,7 +24,7 @@ const OverviewCard: FC<OverViewCardTypes> = ({
                 width: '15rem',
                 paddingTop: '1rem',
                 backgroundColor: '#ffffff',
-                borderRadius: "0.5rem"
+                borderRadius: '0.5rem',
             }}
             elevation={1}>
             <CardHeader
@@ -37,19 +38,20 @@ const OverviewCard: FC<OverViewCardTypes> = ({
                             height: '3rem',
                             fontSize: '1.2rem',
                         }}>
-                        {cardIcon}
+                        {cardIcon as ReactNode}
                     </Avatar>
                 }
             />
             <CardContent>
                 <Stack direction="row" alignItems={'center'}>
                     <Typography variant="h6" fontWeight={'bold'} pr="0.5rem">
-                        {profitNumber}
+                        ${profitNumber}
                     </Typography>
                     <Typography
                         fontSize="0.8rem"
                         color={isAHike ? 'green' : 'red'}>
-                        {isAHike ? '+' : '-'}{percentage}%
+                        {isAHike ? '+' : '-'}
+                        {percentage}%
                     </Typography>
                 </Stack>
                 <Typography
@@ -64,7 +66,7 @@ const OverviewCard: FC<OverViewCardTypes> = ({
 };
 
 type OverViewCardTypes = {
-    cardIcon: ReactNode;
+    cardIcon: IconBaseProps;
     profitNumber: string;
     percentage: string;
     title: string;

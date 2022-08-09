@@ -16,6 +16,7 @@ import {
 } from '@syncfusion/ej2-react-charts';
 import { SparklineAreaData } from '../../../data/dummyData/sparkLineData';
 import RevenueUpdatesStacked from './RevenueUpdatesStacked';
+import { TypographyH4 } from '../../Layout/UIComponents';
 
 const LegendItem: FC<{ properties: CSSProperties; title: string }> = ({
     properties,
@@ -39,7 +40,7 @@ const LegendItem: FC<{ properties: CSSProperties; title: string }> = ({
 const RevenueUpdates = () => {
     const theme = useTheme();
     return (
-        <Paper elevation={2} sx={{borderRadius: "0.6rem"}}>
+        <Paper elevation={2} sx={{ borderRadius: '0.6rem' }}>
             {/* Heading and Legend */}
             <Stack
                 px={4}
@@ -70,22 +71,16 @@ const RevenueUpdates = () => {
                 pb={2}>
                 {/* Highlights and Line Graph */}
                 <Grid item alignItems={'center'}>
-                    <p>
-                        <Typography variant="h4" fontWeight="bold">
-                            $93,438
-                        </Typography>
-                        <Typography variant="body1" color="#4B5563">
-                            Budget
-                        </Typography>
-                    </p>
-                    <p>
-                        <Typography variant="h4" fontWeight="bold">
-                            $48,487
-                        </Typography>
-                        <Typography variant="body1" color="#4B5563">
-                            Expense
-                        </Typography>
-                    </p>
+                    <TypographyH4
+                        title="Budget"
+                        amount={93438}
+                        amountColor="#4B5563"
+                    />
+                    <TypographyH4
+                        title="Expense"
+                        amount={48487}
+                        amountColor="#4B5563"
+                    />
 
                     <SparklineComponent
                         id="revenue_line"
@@ -114,7 +109,7 @@ const RevenueUpdates = () => {
                     </SparklineComponent>
                     <Button
                         variant="contained"
-                        color="secondary"
+                        color="quaternary"
                         disableElevation
                         sx={{
                             paddingX: '1rem',
@@ -122,6 +117,7 @@ const RevenueUpdates = () => {
                             borderRadius: '0.8rem',
                             fontWeight: 'bold',
                             fontSize: '1.1rem',
+                            color: 'secondary.main',
                         }}>
                         Download Report
                     </Button>

@@ -1,11 +1,10 @@
 import { Stack } from '@mui/material';
-import { FC } from 'react';
 import { IconBaseProps } from 'react-icons';
 import { BiRefresh } from 'react-icons/bi';
 import { BsFillPeopleFill, BsPeople } from 'react-icons/bs';
 import { FiPackage } from 'react-icons/fi';
 import { GiProgression } from 'react-icons/gi';
-import OverviewCard from '../../Layout/UIComponents/OverviewCards/OverviewCard';
+import { OverviewCard } from '../../Layout/UIComponents/index';
 
 type OverViewCardType = {
     isAHike: boolean;

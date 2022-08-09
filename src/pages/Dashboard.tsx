@@ -1,13 +1,24 @@
-import { Container, Grid } from '@mui/material';
-import { EarningsCard, OverViewCards, RevenueUpdates } from '../components';
+import { Container, Grid, Stack, Typography } from '@mui/material';
+import {
+    EarningsBarGraph,
+    EarningsCard,
+    OverViewCards,
+    RevenueUpdates,
+    YearlySalesPieGraph,
+} from '../components';
 const Dashboard = () => {
     return (
         <Container>
-            <Grid container justifyContent={'center'} alignItems={'center'}>
+            <Grid
+                container
+                direction="column"
+                justifyContent={'center'}
+                alignItems={'center'}
+                spacing={6}>
                 <Grid item>
                     {/* Earnings and Overview Cards */}
                     <Grid container direction={'row'}>
-                        <Grid item xs={4} md={4}>
+                        <Grid item xs={4}>
                             <EarningsCard />
                         </Grid>
                         <Grid item xs={8}>
@@ -18,13 +29,21 @@ const Dashboard = () => {
                 {/* Revenue Updates */}
                 <Grid
                     item
-                    mt={4}
                     p={1}
-                    justifyContent={'center'}
-                    alignItems={'center'}
+                    m={1}
                     width="90%"
-                    sx={{ backgroundColor: '#ffffff', }}>
+                    sx={{ backgroundColor: '#ffffff' }}>
                     <RevenueUpdates />
+                </Grid>
+                {/* Earnings Overview Card */}
+                <Grid item height="100%">
+                    <EarningsBarGraph />
+                </Grid>
+                <Grid item>
+                    <YearlySalesPieGraph />
+                </Grid>
+                <Grid item>
+                    <p>&#169; 2022 All rights reserved by SCA Company</p>
                 </Grid>
             </Grid>
         </Container>

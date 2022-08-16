@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import { LineChart } from "../../components";
+import PageBox from "../../components/Layout/PageBox";
+import Header from "../../components/Layout/UIComponents/Header";
 
 const Line = () => {
-  return (
-    <div>Line</div>
-  )
-}
+    return (
+        <PageBox>
+            <Header title="Line" category="Charts" />
+            <LineChart/>
+        </PageBox>
+    );
+};
 
-export default Line
+export default Line;

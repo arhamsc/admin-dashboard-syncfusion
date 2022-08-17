@@ -5,6 +5,10 @@ const PageBox: FC<{ children: ReactNode }> = ({ children }) => {
     return (
         <Box bgcolor="white" mx="2rem" px="2rem">
             {children}
+            <p style={{ textAlign: "center" }}>
+                &#169; 2022 All rights reserved by SCA Company
+            </p>
+            <br />
         </Box>
     );
 };

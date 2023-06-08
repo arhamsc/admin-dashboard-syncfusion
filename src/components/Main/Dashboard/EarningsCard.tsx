@@ -30,7 +30,7 @@ const EarningsCard = () => {
                             variant="body1"
                             fontWeight={'bold'}
                             color="quaternary.light">
-                            Earnings
+                            Earnings:
                         </Typography>
                         <Typography
                             component="h2"
